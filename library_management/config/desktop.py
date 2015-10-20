@@ -16,5 +16,11 @@ def get_data():
 			"icon": "octicon octicon-mirror",
 			"type": "module",
 			"label": _("Circulation")
-		}
+		},
+		"Procurement": {
+			"color": "green",
+			"icon": "octicon octicon-repo-clone",
+			"type": "module",
+			"label": _("Procurement")
+		},
 	}
