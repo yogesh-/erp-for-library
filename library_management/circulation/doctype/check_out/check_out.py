@@ -7,4 +7,12 @@ import frappe
 from frappe.model.document import Document
 
 class CheckOut(Document):
-	pass
+		def set(self):
+			self.set_time()
+			
+		def set_time(self):
+			self.date = today()
+			
+	
+				
+		
