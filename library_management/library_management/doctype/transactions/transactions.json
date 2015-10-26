@@ -154,10 +154,10 @@
  "is_submittable": 0, 
  "issingle": 0, 
  "istable": 0, 
- "modified": "2015-10-26 12:32:12.877321", 
+ "modified": "2015-10-26 17:50:00.752803", 
  "modified_by": "Administrator", 
  "module": "Library Management", 
- "name": "Transaction", 
+ "name": "Transactions", 
  "name_case": "", 
  "owner": "Administrator", 
  "permissions": [

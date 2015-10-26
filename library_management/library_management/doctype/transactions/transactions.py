@@ -5,9 +5,11 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
+from frappe.utils import now
 
-class Transaction(Document):
+class Transactions(Document):
     def validate(self):
+        self.validate_date()
         last_transaction = frappe.get_list("Transactions",
             fields=["transaction_type", "transaction_date"],
             filters = {
@@ -22,4 +24,14 @@ class Transaction(Document):
                     last_transaction[0].transaction_date))
         else:
             if not last_transaction or last_transaction[0].transaction_type!="Issue":
-                frappe.throw(_("Cannot return article not issued"))
+                #frappe.throw(_("Cannot return article not issued"))
+                #we should not use _ or __ in between (( else it throws error.
+                frappe.throw(("Cannot return article not issued"))
+        
+    def validate_date(self):
+        if self.transaction_date > now():
+            frappe.throw("Date cannot be greater than today's date")
+        
+        if self.transaction_date < now():
+            frappe.throw("Date cannot be less than today's date")
+        
