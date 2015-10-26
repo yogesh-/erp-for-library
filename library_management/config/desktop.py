@@ -11,12 +11,14 @@ def get_data():
 			"label": _("Library Management")
 		},
 	
+		
 		"Circulation": {
 			"color": "purple",
 			"icon": "octicon octicon-mirror",
 			"type": "module",
 			"label": _("Circulation")
 		},
+		
 		"Procurement": {
 			"color": "green",
 			"icon": "octicon octicon-repo-clone",
